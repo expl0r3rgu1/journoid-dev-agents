@@ -1,7 +1,6 @@
 ---
 description: Commits the local changes in atomic commits. This command is best run after completing an execute run successfully, and preparing for plan review.
 agent: build
-model: opencode/big-pickle
 ---
 
 # Commit Changes
