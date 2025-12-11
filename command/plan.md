@@ -3,7 +3,9 @@ description: Plan a feature or task with structured output to PLAN.md
 agent: plan
 ---
 
-# Planning: $ARGUMENTS
+# Planning
+
+$ARGUMENTS
 
 ## PLAN.md Output Requirement
 
