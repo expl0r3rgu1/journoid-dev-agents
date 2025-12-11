@@ -1,30 +1,28 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "tui": {
+    "scroll_acceleration": {
+      "enabled": true
+    }
+  },
   "mcp": {
     "context7": {
       "enabled": true,
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
       "headers": {
-        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
       }
     },
     "playwright": {
-      "enabled": true,
+      "enabled": false,
       "type": "local",
-      "command": [
-        "npx",
-        "@playwright/mcp@latest"
-      ]
+      "command": ["npx", "@playwright/mcp@latest"]
     },
     "mastra": {
+      "enabled": false,
       "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@mastra/mcp-docs-server"
-      ],
-      "enabled": false
+      "command": ["npx", "-y", "@mastra/mcp-docs-server"]
     }
   },
   "permission": {
@@ -49,4 +47,9 @@
     },
     "webfetch": "ask"
   },
+  "agent": {
+    "explore": {
+      "model": "github-copilot/gpt-4.1"
+    }
+  }
 }
