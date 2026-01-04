@@ -51,9 +51,5 @@
     "explore": {
       "model": "opencode/minimax-m2.1-free"
     },
-    "review": {
-      "model": "opencode/minimax-m2.1-free",
-      "agent": "plan"
-    }
   }
 }
