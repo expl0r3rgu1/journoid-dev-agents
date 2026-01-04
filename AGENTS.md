@@ -61,5 +61,3 @@ NEVER invent documentation, especially when you run into a difficult bug to solv
 
 ALWAYS use the package manager already used in the code base.
 For new projects, DEFAULT to pnpm.
-
-
