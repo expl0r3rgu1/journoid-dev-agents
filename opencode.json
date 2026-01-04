@@ -50,6 +50,6 @@
   "agent": {
     "explore": {
       "model": "opencode/minimax-m2.1-free"
-    },
+    }
   }
 }
