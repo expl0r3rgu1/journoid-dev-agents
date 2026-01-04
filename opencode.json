@@ -49,7 +49,11 @@
   },
   "agent": {
     "explore": {
-      "model": "github-copilot/gpt-4.1"
+      "model": "opencode/minimax-m2.1-free"
+    },
+    "review": {
+      "model": "opencode/minimax-m2.1-free",
+      "agent": "plan"
     }
   }
 }
