@@ -1,7 +1,7 @@
 ---
-description: Commit local changes in atomic commits
-model: github-copilot/gpt-4.1
-agent: build
+description: Create a commit plan for local changes in atomic commits
+model: opencode/minimax-m2.1-free
+agent: plan
 subtask: true
 ---
 
