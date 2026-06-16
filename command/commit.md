@@ -1,12 +1,12 @@
 ---
-description: git commit and push
+description: git commit
 model: opencode/deepseek-v4-flash-free
 variant: low
 subtask: true
 agent: build
 ---
 
-commit and push
+commit
 
 Don't use any prefix.
 
