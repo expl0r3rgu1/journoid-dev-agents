@@ -15,6 +15,8 @@ You MUST write and maintain a `PLAN.md` file in the project root throughout this
 
 The ONLY file you may write to is `PLAN.md`. Do not implement anything.
 
+Ask clarifying questions through the `question` tool when decisions, requirements, or tradeoffs are unresolved. Do not write open questions into `PLAN.md`.
+
 ## PLAN.md Structure
 
 ```markdown
@@ -43,7 +45,4 @@ Technical approach and architecture decisions.
 
 ## Risks and Considerations
 - Edge cases, performance, security
-
-## Open Questions
-- Remaining uncertainties
 ```

@@ -1,34 +1,31 @@
 ---
-description: Create a commit plan for local changes in atomic commits
-model: opencode/minimax-m2.1-free
-agent: plan
+description: git commit and push
+model: opencode/deepseek-v4-flash-free
+variant: low
 subtask: true
+agent: build
 ---
 
-# Commit Changes
-Analyze git changes and propose a commit plan.
+commit and push
 
-## Additional Instructions
-$ARGUMENTS
+Don't use any prefix.
 
-## Commit Types
-- **fix:** Bug fixes
-- **feat:** New features
-- **chore:** Non-functional tidying
-- **refactor:** Code restructuring without behavior change
-- **docs:** Documentation updates
-- **ci:** CI/CD changes
+prefer to explain WHY something was done from an end user perspective instead of
+WHAT was done.
 
-## Process
-1. Run `git status -s` to see changed files
-2. Use `git diff` to understand the changes
-3. Group related files and draft commit messages in `type: description` format (imperative mood)
-4. Return ONLY the proposed commit plan to the main session in this format:
+do not do generic messages like "improved agent experience" be very specific
+about what user facing changes were made
 
-## Proposed Commits
-For each commit:
-- **Files:** list of files
-- **Message:** `type: description`
+if there are conflicts DO NOT FIX THEM. notify me and I will fix them
 
-Do NOT execute any commits. Only return the plan for the user to review in the main session.
+## GIT DIFF
 
+!`git diff`
+
+## GIT DIFF --cached
+
+!`git diff --cached`
+
+## GIT STATUS --short
+
+!`git status --short`
