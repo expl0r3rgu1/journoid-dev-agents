@@ -44,7 +44,7 @@
   },
   "agent": {
     "explore": {
-      "model": "opencode/minimax-m2.1-free"
+      "model": "opencode/deepseek-v4-flash-free"
     }
   }
 }
