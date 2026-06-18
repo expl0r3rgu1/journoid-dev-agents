@@ -41,7 +41,8 @@
       "mv *": "ask",
       "*": "allow"
     },
-    "webfetch": "ask"
+    "webfetch": "ask",
+    "websearch": "ask"
   },
   "agent": {
     "explore": {
