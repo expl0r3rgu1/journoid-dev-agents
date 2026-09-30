@@ -1,52 +1,56 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "lsp": true,
+  "formatter": true,
+  "plugins": [
+    "opencode-wakatime@1.4.0"
+  ],
   "mcp": {
-    "context7": {
-      "enabled": true,
-      "type": "remote",
-      "url": "https://mcp.context7.com/mcp",
-      "headers": {
-        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+    "servers": {
+      "context7": {
+        "disabled": false,
+        "type": "remote",
+        "url": "https://mcp.context7.com/mcp",
+        "headers": {
+          "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+        }
+      },
+      "playwright": {
+        "disabled": true,
+        "type": "local",
+        "command": ["npx", "@playwright/mcp@latest"]
+      },
+      "mastra": {
+        "disabled": true,
+        "type": "local",
+        "command": ["npx", "-y", "@mastra/mcp-docs-server"]
       }
-    },
-    "playwright": {
-      "enabled": false,
-      "type": "local",
-      "command": ["npx", "@playwright/mcp@latest"]
-    },
-    "mastra": {
-      "enabled": false,
-      "type": "local",
-      "command": ["npx", "-y", "@mastra/mcp-docs-server"]
     }
   },
-  "permission": {
-    "edit": "allow",
-    "bash": {
-      "git *": "allow",
-      "git push": "deny",
-      "npm *": "allow",
-      "pnpm *": "allow",
-      "yarn *": "allow",
-      "bun *": "allow",
-      "python *": "allow",
-      "pip *": "allow",
-      "pytest *": "allow",
-      "cargo *": "allow",
-      "go *": "allow",
-      "composer *": "allow",
-      "bundle *": "allow",
-      "rm -rf *": "ask",
-      "mv *": "ask",
-      "*": "allow"
-    },
-    "webfetch": "ask",
-    "websearch": "ask"
-  },
-  "agent": {
+  "permissions": [
+    { "action": "edit", "resource": "*", "effect": "allow" },
+    { "action": "shell", "resource": "*", "effect": "allow" },
+    { "action": "shell", "resource": "git *", "effect": "allow" },
+    { "action": "shell", "resource": "npm *", "effect": "allow" },
+    { "action": "shell", "resource": "pnpm *", "effect": "allow" },
+    { "action": "shell", "resource": "yarn *", "effect": "allow" },
+    { "action": "shell", "resource": "bun *", "effect": "allow" },
+    { "action": "shell", "resource": "python *", "effect": "allow" },
+    { "action": "shell", "resource": "pip *", "effect": "allow" },
+    { "action": "shell", "resource": "pytest *", "effect": "allow" },
+    { "action": "shell", "resource": "cargo *", "effect": "allow" },
+    { "action": "shell", "resource": "go *", "effect": "allow" },
+    { "action": "shell", "resource": "composer *", "effect": "allow" },
+    { "action": "shell", "resource": "bundle *", "effect": "allow" },
+    { "action": "shell", "resource": "git push *", "effect": "deny" },
+    { "action": "shell", "resource": "rm -rf *", "effect": "ask" },
+    { "action": "shell", "resource": "mv *", "effect": "ask" },
+    { "action": "webfetch", "resource": "*", "effect": "allow" },
+    { "action": "websearch", "resource": "*", "effect": "allow" }
+  ],
+  "agents": {
     "explore": {
-      "model": "opencode/deepseek-v4-flash-free"
+      "model": "openai/gpt-6-luna#low"
     }
   }
 }

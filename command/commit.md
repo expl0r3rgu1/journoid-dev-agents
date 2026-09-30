@@ -1,8 +1,7 @@
 ---
 description: git commit
-model: opencode/deepseek-v4-flash-free
-variant: low
-subtask: true
+model: openai/gpt-5.6-luna#low
+subagent: true
 agent: build
 ---
 

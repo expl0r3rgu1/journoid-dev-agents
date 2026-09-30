@@ -1,0 +1,26 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "scroll": {
+    "acceleration": true
+  },
+  "attention": {
+    "notifications": true,
+    "sound": true
+  },
+  "terminal": {
+    "copy": "select"
+  },
+  "animations": true,
+  "session": {
+    "scrollbar": false,
+    "image_preview": false
+  },
+  "tabs": {
+    "mode": "auto",
+    "layout": "horizontal",
+    "indicators": "status"
+  },
+  "prompt": {
+    "image_preview": true
+  }
+}
