@@ -42,7 +42,6 @@
     { "action": "shell", "resource": "go *", "effect": "allow" },
     { "action": "shell", "resource": "composer *", "effect": "allow" },
     { "action": "shell", "resource": "bundle *", "effect": "allow" },
-    { "action": "shell", "resource": "git push *", "effect": "deny" },
     { "action": "shell", "resource": "rm -rf *", "effect": "ask" },
     { "action": "shell", "resource": "mv *", "effect": "ask" },
     { "action": "webfetch", "resource": "*", "effect": "allow" },
