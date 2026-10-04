@@ -1,6 +1,6 @@
 ---
 description: git commit
-model: openai/gpt-5.6-luna#low
+model: openai/gpt-6-luna#low
 subagent: true
 agent: build
 ---
