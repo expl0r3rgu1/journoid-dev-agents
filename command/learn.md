@@ -1,16 +1,11 @@
 ---
-description: Extract non-obvious learnings from session to AGENTS.md files to build codebase understanding
+description: Extract non-obvious learnings from session to the AGENTS.md file to build codebase understanding
 ---
 
-Analyze this session and extract non-obvious learnings to add to AGENTS.md files.
-
-AGENTS.md files can exist at any directory level, not just the project root. When an agent reads a file, any AGENTS.md in parent directories are automatically loaded into the context of the tool read. Place learnings as close to the relevant code as possible:
-
-- Project-wide learnings → root AGENTS.md
-- Feature-specific → src/auth/AGENTS.md
+Analyze this session and extract non-obvious learnings to add to this project's AGENTS.md file.
 
 What counts as a learning (non-obvious discoveries only):
-
+- Preferences or directions from me (that didn't cause subsequent issues) that wouldn't have been followed unless explicitly requested
 - Hidden relationships between files or modules
 - Execution paths that differ from how code appears
 - Non-obvious configuration, env vars, or flags
@@ -21,21 +16,20 @@ What counts as a learning (non-obvious discoveries only):
 - Files that must change together
 
 What NOT to include:
-
 - Obvious facts from documentation
 - Standard language/framework behavior
 - Things already in an AGENTS.md
 - Verbose explanations
 - Session-specific details
+- Commit workflow guidance, including message style and conflict handling; this belongs to the global `/commit` command
 
 Process:
-
 1. Review session for discoveries, errors that took multiple attempts, unexpected connections
-2. Determine scope - what directory does each learning apply to?
-3. Read existing AGENTS.md files at relevant levels
-4. Create or update AGENTS.md at the appropriate level
-5. Keep entries to 1-3 lines per insight
+2. Read existing AGENTS.md file
+3. Create or update AGENTS.md
+4. Keep entries to 1-3 lines per insight
+5. Remove or update any information that you recognize as outdated based on the current session
 
-After updating, summarize which AGENTS.md files were created/updated and how many learnings per file.
+After updating, summarize if the AGENTS.md file was created/updated and how many learnings you added/removed.
 
 $ARGUMENTS
